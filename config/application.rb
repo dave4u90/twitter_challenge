@@ -19,8 +19,5 @@ module TwitterAssignment
       g.integration_tool :rspec
     end
 
-    config.middleware.use OmniAuth::Builder do
-      provider :twitter, "GcBbGpGBae6SURh1jtYFyl77s", "j8qdZn3YSQVvMjvjRKvsj1IIdpLLYot6Hy2T9suWYjP3mHX5Fu"  
-    end
   end
 end
