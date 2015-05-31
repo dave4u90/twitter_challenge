@@ -5,7 +5,6 @@
 !/log/.keep
 /tmp
 /.bundle
-/public/assets
 .rvmrc
 \#*#
 *~

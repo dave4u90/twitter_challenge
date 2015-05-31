@@ -16,6 +16,7 @@ group :development do
 
   group :backend do
     gem 'mysql2', '0.3.18'
+    gem 'pg'
   end
 
   group :asset_management do
