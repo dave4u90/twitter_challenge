@@ -13,3 +13,7 @@ Devise.setup do |config|
   config.sign_out_via = :delete
   config.omniauth :twitter, "GcBbGpGBae6SURh1jtYFyl77s", "j8qdZn3YSQVvMjvjRKvsj1IIdpLLYot6Hy2T9suWYjP3mHX5Fu"
 end
+
+Rails.application.config.to_prepare do
+  Devise::SessionsController.layout "application"
+end
