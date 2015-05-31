@@ -4,6 +4,7 @@ require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
 
 ActiveRecord::Migration.maintain_test_schema!
+ActionView::Template.register_template_handler(:slim, :source.to_proc)
 
 RSpec.configure do |config|
   config.use_transactional_fixtures = true
