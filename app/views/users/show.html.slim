@@ -1,0 +1,27 @@
+= javascript_include_tag "jquery.bxslider"
+
+= stylesheet_link_tag "jquery.bxslider"
+
+.container
+  section
+    = select_tag :follower, options_from_collection_for_select(@followers, :screen_name, :name), include_blank: true, class: "follower-search"
+    .tweets-slider= render "tweets_slider"
+    
+    = button_to "Download Tweets", current_user, method: :get, params: { format: :csv }, class: "btn btn-info"
+
+  section
+    h2 Followers
+    table.table.table-bordered.table-responsive
+      tr
+        th ID
+        th Name
+        th Screen Name
+        th Description
+      
+      tbody
+        - @followers.each_with_index do |follower, index|
+          tr class=("#{'info' if index.odd?}")
+            td= follower.id
+            td= follower.name 
+            td= follower.screen_name
+            td= follower.description
