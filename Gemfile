@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.1.5'
 
+gem 'slim-rails', '3.0.1'
+
 group :development do
   group :framework do
     gem 'rails', '4.2.0'
@@ -33,14 +35,10 @@ group :development do
     gem 'select2-rails', '3.5.9.3'
   end
 
-  group :templates do
-    gem 'slim-rails', '3.0.1'
-  end
-  
   group :servers do
     gem 'unicorn', '4.9.0'
   end
-      
+
   group :deployment do
     gem 'capistrano-rails', '1.1.3'
   end
