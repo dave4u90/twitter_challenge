@@ -2,6 +2,8 @@
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
   require 'devise/orm/active_record'
+  config.scoped_views = true
+  #config.secret_key = '9ec1b216f37e133395d958f6679aeea3cb1753226cbf05858fd54db4de3d64839008388680dc8a076be3d20fcd0ed9db2519032c1d47b20a53f144af7f5dab76'
   config.case_insensitive_keys = [:email]
   config.strip_whitespace_keys = [:email]
   config.skip_session_storage = [:http_auth]
